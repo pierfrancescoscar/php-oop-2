@@ -1,7 +1,3 @@
-<!-- Oggi pomeriggio provate ad immaginare alcune classi necessarie per creare uno shop online; ad esempio, ci saranno sicuramente dei prodotti da acquistare e degli utenti che fanno shopping.
-Strutturare le classi gestendo l’ereditarietà dove necessario; ad esempio ci potrebbero essere degli utenti premium che hanno diritto a degli sconti esclusivi, oppure diverse tipologie di prodotti.
-Eseguire poi degli output istanziando oggetti delle varie classi. -->
-
 <?php
 
 class User {
@@ -9,23 +5,45 @@ class User {
     public $name;
     public $lastName;
     public $age;
-    public $email;
-    public $gender;
+    public $sale;
 
-    public function __construct($name, $lastName, $age, $email, $gender){
+    public function __construct($name, $lastName, $age, $sale) {
 
         $this->name = $name;
         $this->lastName = $lastName;
         $this->age = $age;
-        $this->email = $email;
-        $this->gender = $gender;
+        $this->sale = $sale;
 
     }
 
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getLastName() {
+        return $this->lastName;
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
+
+
+    public function setSale() {
+        if ($this->age < 25) {
+            $this->sale = 10;
+        } elseif ($this->age > 35) {
+            $this->sale = 20;
+        } else { 
+            $this->sale = 0;
+        }
+    }
+
+    public function getSale() {
+        $this->setSale();
+        return $this->sale;
+    }
 
 }
-
-$user1 = new User('Pierfrancesco', "Scarinci", 27, 'scarincipierfrancesco@gmail.com', 'Male');
-var_dump($user1);
 
 ?>
