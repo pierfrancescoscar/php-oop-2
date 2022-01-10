@@ -14,11 +14,11 @@ class PremiumUser extends User {
 
     public function setSale() {
         if ($this->age < 25) {
-            $this->sale = 50;
+             return $this->sale = 50;
         } elseif ($this->age > 35) {
-            $this->sale = 60;
+            return $this->sale = 60;
         } else {
-            $this->sale = 30;
+             return $this->sale = 30;
         }
     }
 

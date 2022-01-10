@@ -27,7 +27,7 @@ Eseguire poi degli output istanziando oggetti delle varie classi. -->
         <h1>Normal User</h1>
         
             <?php
-            $user1 = new User('Pierfrancesco', "Scarinci", 36, 0);
+            $user1 = new User('Pierfrancesco', "Scarinci", 24, 0);
             ?>
 
             <h3>User name: <?php echo $user1->getName()?></h3>
@@ -38,7 +38,7 @@ Eseguire poi degli output istanziando oggetti delle varie classi. -->
         <h1>Premium User</h1>
 
             <?php
-            $user2 = new User('Pietrofranco', "Scarci", 24, 0);
+            $user2 = new PremiumUser('Pietrofranco', "Scarci", 36, 0);
             ?>
 
             <h3>User name: <?php echo $user2->getName()?></h3>

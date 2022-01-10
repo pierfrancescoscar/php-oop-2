@@ -2,10 +2,10 @@
 
 class User {
 
-    public $name;
-    public $lastName;
-    public $age;
-    public $sale;
+    protected $name;
+    protected $lastName;
+    protected $age;
+    protected $sale;
 
     public function __construct($name, $lastName, $age, $sale) {
 
@@ -31,11 +31,11 @@ class User {
 
     public function setSale() {
         if ($this->age < 25) {
-            $this->sale = 10;
+             return $this->sale = 10;
         } elseif ($this->age > 35) {
-            $this->sale = 20;
+             return $this->sale = 20;
         } else { 
-            $this->sale = 0;
+             return $this->sale = 0;
         }
     }
 
